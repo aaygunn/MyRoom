@@ -11,3 +11,7 @@ Windows 98 temalı, birden fazla JS uygulamasını bir arada barındıran consep
 </ul>
 
 <h3>Ekran Kaydı</h3>
+
+
+https://github.com/aaygunn/MyRoom/assets/104105404/ba2e1531-51cd-45a2-a7e4-f531eae45985
+
