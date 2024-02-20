@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="yapilacaklar.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>My Room</title>
+  </head>
+  <body>
+    <div class="win98"></div>
+    <div class="container" id="container">
+      <div class="bilgisayar" id="bilgisayar">
+        <div class="bilgisayar-icons">
+          <img src="img/bilgisayarim.png" alt="" />
+          <p>Bilgisayarım</p>
+          <img src="img/cop-kutusu.png" alt="" />
+          <p>Çöp Kutusu</p>
+          <img src="img/belgelerim.png" alt="" />
+          <p>Belgelerim</p>
+          <img src="img/ag-baglanti.png" alt="" />
+          <p>Ağ Bağlantıları</p>
+          <img id="hastane" src="img/hastane.png" alt="" />
+          <p>Hastane Randevu</p>
+        </div>
+        <div id="yapilacaklar" class="yapilacaklar">
+          <img src="img/notebook.png" alt="" />
+          <p>Yapılacaklar</p>
+        </div>
+        <img id="hava-durumu" src="img/weather.png" alt="" />
+        <p id="hava-text">Hava Durumu</p>
+        <img class="win-foot" src="img/win-foot.png" alt="" />
+        <div class="close">
+          <i class="fa-solid fa-xmark" id="bilgisayar-close"></i>
+        </div>
+      </div>
+      <!---- HASTANE ------>
+      <div id="hastane-container" class="hastane-container">
+        <div class="header">
+          <img class="header-logo" src="img/hastane.png" alt="" />
+          HASTANE RANDEVUSU AL
+          <div class="close">
+            <i class="fa-solid fa-xmark" id="hastane-close"></i>
+          </div>
+        </div>
+
+        <aside class="side">
+          <p id="doktorlarimiz">Doktorlarımız</p>
+          <a href="">Bölümlerimiz</a>
+          <a href="">İletişim</a>
+        </aside>
+        <div class="main">
+          <div id="card-container" class="card-container">
+            <!-- <div class="acilan-card">
+              <h4>Dr.Emre Aygün</h4>
+              <img class="acilan-img" src="img/hastane.png" alt="" />
+              <p class="acilan-uzman">Uzmanlik</p>
+              <p class="acilan-desc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
+                iusto eum nam aspernatur repellat voluptatibus excepturi
+                inventore nesciunt doloribus qui optio perferendis similique
+                ullam vero laudantium alias itaque, labore quibusdam.
+              </p>
+            </div> -->
+            <!-- <div class="card">
+              <div class="card-img">
+                <i class="fa-solid fa-user-doctor doktor"></i>
+              </div>
+
+              <p class="doktor-adi">Dr.Ali</p>
+              <p class="uzmanlik">Psikiyatri</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="power">
+        <i id="power" class="fa fa-power-off" aria-hidden="true"></i>
+      </div>
+
+      <!-------HAVA DURUMU------>
+      <div id="hava-durumu-container" class="hava-durumu-container">
+        <div class="hava-baslik">
+          <i class="fa-solid fa-xmark" id="hava-close"></i>
+        </div>
+
+        <div class="hava-durumu-header">
+          <div class="loc">
+            <i class="fa-solid fa-location-dot loc-i fa-lg"></i>
+          </div>
+          <div class="hava-durumu-input">
+            <input type="text" id="hava-input" placeholder="Şehir Giriniz..." />
+          </div>
+          <div class="hava-search">
+            <i class="fa-solid fa-magnifying-glass" id="hava-search"></i>
+          </div>
+        </div>
+        <div class="hava-durumu-mid">
+          <div class="hava-img" id="hava-img">
+            <img src="img/weather.png" alt="" />
+          </div>
+          <p id="sehir-ismi"></p>
+          <div class="hava-derece">
+            <p id="hava-derece"></p>
+            <p id="celcius">°C</p>
+          </div>
+          <div class="hava-desc">
+            <p id="hava-desc">-</p>
+          </div>
+        </div>
+        <div class="hava-durumu-foot">
+          <div class="nem">
+            <div class="nem-i">
+              <i class="fa-solid fa-water fa-lg"></i>
+            </div>
+
+            <div class="nem-desc">
+              <p id="nem">-</p>
+              <p>Nem</p>
+            </div>
+          </div>
+
+          <div class="ruzgar">
+            <div class="ruzgar-i"><i class="fa-solid fa-wind fa-lg"></i></div>
+
+            <div class="ruzgar-desc">
+              <p id="ruzgar">- Km/h</p>
+              <p>Rüzgar Hızı</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- --------YAPILACAKLAR---------- -->
+      <div id="ana-container" class="yapilacaklar-ana-container">
+        <div class="yapilacaklar-container">
+          <h2 class="baslik yapilacaklar-baslik">Yapılacaklar</h2>
+          <div class="yapilacaklar-head">
+            <input type="text" id="yapilacaklar-text" placeholder="..." />
+            <i
+              class="fa-solid fa-plus yapilacaklar-icon"
+              id="yapilacaklar-icon"
+            ></i>
+          </div>
+          <div id="yapiacaklar-container" class="yapilacaklar-content">
+            <!-- <div class="yapilacaklar-cont">
+            <div
+              class="yapilacaklar-eklenen"
+              id="yapilacaklar-eklenen"
+              aria-readonly="true"
+            >
+              Randevu al
+            </div>
+            <div class="yapilacaklar-sil"></div>
+            <i class="fa-solid fa-trash-can yapilacak-sil"></i>
+            <div class="yapilacak-guncelle-cont">
+              <i class="fa-regular fa-pen-to-square yapilacak-guncelle"></i>
+            </div>
+          </div> -->
+          </div>
+          <div id="kapat" class="close-yapilacak">Kapat</div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="yapilacaklar.js"></script>
+  </body>
+</html>

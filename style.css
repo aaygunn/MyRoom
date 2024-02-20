@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+body a {
+  text-decoration: none;
+}
+.container {
+  position: relative;
+  background-image: url("./img/bilgisayar-odasi2.jpg");
+  height: 100%;
+  background-color: rebeccapurple;
+  width: 100%;
+  /* filter: blur(10px); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .blur {
+  filter: blur(8px);
+} */
+.bilgisayar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 230px;
+  height: 150px;
+  position: relative;
+  top: -90px;
+  right: -210px;
+  background-color: #01817f;
+  transition: transform 2s ease-in-out;
+  display: none;
+  border: 5px solid rgb(94, 93, 93);
+}
+
+.bilgisayar p {
+  color: white;
+  font-size: 4px;
+}
+
+.bilgisayar-icons {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.bilgisayar:hover {
+  cursor: pointer;
+}
+
+.bilgisayar-icons img {
+  width: 20px;
+}
+
+.yapilacaklar {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 35px;
+  position: absolute;
+  top: 8px;
+}
+
+.yapilacaklar img {
+  width: 12px;
+  margin-left: 4px;
+}
+
+#hava-durumu {
+  width: 35px;
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 28px;
+}
+#hava-text {
+  position: absolute;
+  top: 44.3px;
+  left: 34px;
+}
+
+.win-foot {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.power {
+  width: 20px;
+  height: 20px;
+  color: bisque;
+  position: absolute;
+  display: block;
+  margin-left: 50%;
+  margin-bottom: 2%;
+  cursor: pointer;
+  animation-name: power;
+  animation-duration: 0.9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes power {
+  to {
+    color: red;
+  }
+  from {
+    color: yellow;
+  }
+}
+
+.link {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 25px;
+  left: 25px;
+}
+.hastane-container {
+  background-color: white;
+  width: 230px;
+  height: 150px;
+  position: relative;
+  top: -90px;
+  right: -210px;
+  display: none;
+  border: 5px solid rgb(94, 93, 93);
+}
+
+.power-on {
+  display: block;
+  transform: scale(3);
+  margin-top: 10%;
+  z-index: 5;
+  transition: 1s ease-in-out;
+}
+#hastane {
+  z-index: 10;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 10%;
+  background: #eb2632;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+}
+.header-logo {
+  width: 20px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+  z-index: 15;
+}
+.side {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  background: #eb2632;
+  height: 90%;
+  white-space: none;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+.side a {
+  text-decoration: none;
+  color: white;
+  font-size: 5px;
+}
+#doktorlarimiz {
+  color: white;
+  font-size: 5px;
+  cursor: pointer;
+}
+.main {
+  display: flex;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  position: absolute;
+  top: 15%;
+  left: 16%;
+  width: 80%;
+  height: 80%;
+  overflow-y: auto;
+  overflow-anchor: auto;
+}
+.card-container::-webkit-scrollbar-thumb {
+  background: #eb2632;
+  border-radius: 6px;
+}
+.doktor-ana {
+  background: transparent;
+  width: 35px;
+  height: 50px;
+  z-index: 100;
+}
+.card {
+  width: 35px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3px;
+  height: 45px;
+  background-color: #303841;
+  cursor: pointer;
+  position: relative;
+}
+.card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: gray; */
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  padding: 1px;
+  /* border-radius: 50%; */
+}
+.image {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.doktor {
+  color: #f6e4ad;
+}
+.doktor-adi {
+  padding: 1px;
+  font-size: 5px;
+  font-weight: bold;
+  text-align: center;
+  color: #f6e4ad;
+}
+.uzmanlik {
+  padding: 1px;
+  font-size: 3px;
+  font-weight: bold;
+  text-align: center;
+  color: #d3d6db;
+}
+
+.dr-sec {
+  position: absolute;
+  bottom: -6px;
+  width: 30px;
+  height: 8px;
+  font-size: 4px;
+  text-align: center;
+}
+.acilan-head {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.acilan-head h4 {
+  margin-left: 20px;
+}
+.acilan-head i {
+  font-size: 10px;
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  color: #eb2632;
+}
+.acilan-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.acilan-card h4 {
+  display: block;
+  text-align: center;
+}
+
+.acilan-img {
+  background: none;
+  width: 70px;
+  height: 70px;
+}
+.acilan-uzman {
+  font-size: 10px;
+  margin-top: 5px;
+  font-weight: 700;
+}
+.acilan-desc {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 5px;
+}
+.close i {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+#bilgisayar-close {
+  color: white;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+}
+.win98 {
+  background-image: url(img/win98.png);
+  width: 300px;
+  height: 190px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 5;
+  position: absolute;
+  margin: 10px;
+  top: 160px;
+  right: 430px;
+  opacity: 0.7;
+}
+
+/* -----------HAVA DURUMU----------- */
+
+.hava-durumu-container {
+  font-family: "poppins", "sans-serif";
+  width: 250px;
+  height: 400px;
+  display: none;
+  background-color: #eaf6f6;
+  z-index: 10;
+  margin-bottom: 60px;
+  transition: all 1s;
+  border-radius: 20px;
+  box-shadow: 0px 0px 50px 0px #000000;
+}
+.hava-baslik {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.baslik {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+#hava-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+.hava-durumu-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+#hava-input {
+  width: 150px;
+  height: 25px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid gray;
+}
+.loc-i {
+  margin-left: 20px;
+  height: 25px;
+  margin-top: 20px;
+}
+#hava-search {
+  margin-right: 20px;
+  height: 30px;
+  background-color: #f0ece2;
+  width: 30px;
+  text-align: center;
+  padding-top: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.hava-durumu-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hava-img img {
+  width: 150px;
+  margin-top: 10px;
+}
+.hava-derece {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10px;
+}
+#hava-derece {
+  font-size: 40px;
+  font-weight: 700;
+}
+#celcius {
+  margin-bottom: 20px;
+}
+#sehir-ismi {
+  font-size: 20px;
+}
+.hava-desc {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+.hava-durumu-foot {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.nem,
+.ruzgar {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 20px;
+  gap: 10px;
+}
+
+.nem-desc,
+.ruzgar-desc {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  line-height: 13px;
+}
+.nem-desc p,
+.ruzgar-desc p {
+  font-size: 13px;
+}
